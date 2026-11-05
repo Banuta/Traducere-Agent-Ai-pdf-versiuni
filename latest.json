@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "date": "2026-11-05",
+  "notes": [
+    "Prima versiune cu instalator Windows (TraduceriTED-Setup.exe): Python inclus, fără drepturi de administrator",
+    "La instalare alegi AI-ul: doar Claude, doar ChatGPT sau ambele; programul de conectare se poate instala direct",
+    "Actualizări automate cu un clic, direct din GitHub",
+    "Traduceri mai curate în toate limbile: liste uniforme, etichete din desene la locul lor"
+  ],
+  "package": "actualizari/TraduceriTED-1.0.0.zip",
+  "sha256": "42acb2c03148ba68c95a253637011a3366269d4f3696b40b72b1f2dad636adb6",
+  "installer": "instalare/TraduceriTED-Setup.exe"
+}
