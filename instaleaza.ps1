@@ -20,6 +20,25 @@
     $PyW = Join-Path $Dir "python\pythonw.exe"
     $AppPy = Join-Path $AppDir "app.py"
 
+    function Stop-TraduceriTED {
+        # portul folosit acum (data\port.txt), apoi cel implicit si cel vechi (8765, versiunile 1.0.x)
+        $ports = @()
+        $pf = Join-Path $Dir "data\port.txt"
+        if (Test-Path $pf) { try { $ports += [int]((Get-Content $pf -Raw).Trim()) } catch { } }
+        $ports += 47321, 8765
+        foreach ($port in ($ports | Select-Object -Unique)) {
+            try {
+                # oprim doar daca pe port raspunde chiar Traduceri TED, nu alt program
+                $st = (Invoke-WebRequest -UseBasicParsing -Uri "http://127.0.0.1:$port/api/state" -TimeoutSec 3).Content | ConvertFrom-Json
+                if ($null -ne $st.ai_modes) {
+                    Invoke-WebRequest -UseBasicParsing -Method Post -Uri "http://127.0.0.1:$port/api/shutdown" `
+                        -Headers @{ "X-Fise" = "1" } -ContentType "application/json" -Body '{"force": true}' -TimeoutSec 5 | Out-Null
+                    Start-Sleep -Seconds 3
+                }
+            } catch { }
+        }
+    }
+
     function Step($m) { Write-Host ""; Write-Host "== $m" -ForegroundColor Cyan }
     function Ok($m) { Write-Host "   $m" -ForegroundColor Green }
     function Ask($question, $default) {
@@ -57,11 +76,7 @@
 
         # ------------------------------------------------------------ 3. instalare
         Step "3/5 Instalez in $Dir"
-        try {   # daca aplicatia ruleaza, o oprim (altfel fisierele ei sunt blocate)
-            Invoke-WebRequest -UseBasicParsing -Method Post -Uri "http://127.0.0.1:8765/api/shutdown" `
-                -Headers @{ "X-Fise" = "1" } -ContentType "application/json" -Body '{"force": true}' -TimeoutSec 5 | Out-Null
-            Start-Sleep -Seconds 3
-        } catch { }
+        Stop-TraduceriTED   # daca aplicatia ruleaza, o oprim (altfel fisierele ei sunt blocate)
         $new = Join-Path $Dir "_nou"
         if (Test-Path $new) { Remove-Item -Recurse -Force $new }
         Add-Type -AssemblyName System.IO.Compression.FileSystem

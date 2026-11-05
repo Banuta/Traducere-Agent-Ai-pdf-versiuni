@@ -36,6 +36,10 @@ Codul complet al programului este în depozitul `Banuta/Traducere-automata-PDF-`
 
 ## Istoric
 
+### 1.0.2 (2026-11-05)
+- Port nou: aplicația se deschide la `http://127.0.0.1:47321`, în loc de 8765, care încurca alte programe.
+- Dacă portul e ocupat de alt program, aplicația alege singură altul liber și îl ține minte. Se poate schimba și din ⚙ Setări.
+
 ### 1.0.1 (2026-11-05)
 - Fără alerte la instalare: s-a renunțat la fișierele `.exe` nesemnate, care produceau alerta SmartScreen „Don't run” și alertele antivirus false.
 - Instalarea se face cu o singură comandă în PowerShell. Iconița pornește Python-ul oficial, semnat digital.

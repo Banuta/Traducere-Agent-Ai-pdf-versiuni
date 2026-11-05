@@ -1,13 +1,14 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "date": "2026-11-05",
   "notes": [
-    "Fără alerte la instalare: s-a renunțat la fișierele .exe nesemnate (alerta SmartScreen „Don't run” și alertele antivirus false)",
-    "Instalarea se face cu o singură comandă în PowerShell; iconița pornește Python-ul oficial, semnat digital"
+    "Port nou: 47321 în loc de 8765, care încurca alte programe",
+    "Dacă portul e ocupat de alt program, aplicația alege singură altul liber și îl ține minte",
+    "Portul se poate schimba din Setări"
   ],
-  "package": "actualizari/TraduceriTED-1.0.1.zip",
-  "sha256": "0f89440373bd0e6900420a3e5046407b619957be26cbb2e50d1dc56ce83e25d9",
+  "package": "actualizari/TraduceriTED-1.0.2.zip",
+  "sha256": "26128c8de01480d247193b05e852a49389efee323d0bae5188aa0707e9080b64",
   "bundle": "instalare/TraduceriTED-windows.zip",
-  "bundle_sha256": "b76ce9458de2c87807dfb71285946a3b96b9876ab5085b99f0d27aa7af3f5ddd",
-  "bundle_size": 52816236
+  "bundle_sha256": "ff450b10c38fc082a1e54c85152fb19781568b85868241c7afaa521bb2a31bb0",
+  "bundle_size": 52818075
 }
