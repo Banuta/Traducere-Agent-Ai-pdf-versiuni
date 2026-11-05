@@ -36,6 +36,11 @@ Codul complet al programului este în depozitul `Banuta/Traducere-automata-PDF-`
 
 ## Istoric
 
+### 1.0.3 (2026-11-05)
+- Reparat butonul „+ Document nou”, care era acoperit de fereastra „Conectare AI”.
+- Documentele se pot adăuga și fără AI conectat; se procesează după conectare.
+- Verificarea conexiunii AI e mult mai rapidă.
+
 ### 1.0.2 (2026-11-05)
 - Port nou: aplicația se deschide la `http://127.0.0.1:47321`, în loc de 8765, care încurca alte programe.
 - Dacă portul e ocupat de alt program, aplicația alege singură altul liber și îl ține minte. Se poate schimba și din ⚙ Setări.

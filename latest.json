@@ -1,14 +1,14 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "date": "2026-11-05",
   "notes": [
-    "Port nou: 47321 în loc de 8765, care încurca alte programe",
-    "Dacă portul e ocupat de alt program, aplicația alege singură altul liber și îl ține minte",
-    "Portul se poate schimba din Setări"
+    "Reparat butonul „+ Document nou” (era acoperit de fereastra Conectare AI)",
+    "Documentele se pot adăuga și fără AI conectat",
+    "Verificarea conexiunii AI e mult mai rapidă"
   ],
-  "package": "actualizari/TraduceriTED-1.0.2.zip",
-  "sha256": "26128c8de01480d247193b05e852a49389efee323d0bae5188aa0707e9080b64",
+  "package": "actualizari/TraduceriTED-1.0.3.zip",
+  "sha256": "64e8eca63f241d4b45760d21af372b8b162a5a42487c88b3a13db16c645d8122",
   "bundle": "instalare/TraduceriTED-windows.zip",
-  "bundle_sha256": "ff450b10c38fc082a1e54c85152fb19781568b85868241c7afaa521bb2a31bb0",
-  "bundle_size": 52818075
+  "bundle_sha256": "30c340660ce5d83f0e2700b3968527523c864bca2044c7ca0a94a650cb394e50",
+  "bundle_size": 52818668
 }
