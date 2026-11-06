@@ -36,6 +36,11 @@ Codul complet al programului este în depozitul `Banuta/Traducere-automata-PDF-`
 
 ## Istoric
 
+### 1.1.0 (2026-11-06)
+- **Memoria de traduceri: programul învață.** Textele traduse și verificate înainte se iau direct din memorie, instant și fără AI. Corecturile tale intră și ele în memorie.
+- Limbile și paginile se procesează în paralel. O fișă de 2 pagini în 5 limbi: ~3 minute în loc de ~6,5. A doua fișă cu aceleași texte: ~2 minute (traducerea și verificarea ei: câteva secunde).
+- Setări noi: „Memorie de traduceri” (statistici, pornit/oprit, golire) și „Câte cereri AI în paralel”.
+
 ### 1.0.3 (2026-11-05)
 - Reparat butonul „+ Document nou”, care era acoperit de fereastra „Conectare AI”.
 - Documentele se pot adăuga și fără AI conectat; se procesează după conectare.

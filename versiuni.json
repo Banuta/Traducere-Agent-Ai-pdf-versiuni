@@ -52,5 +52,20 @@
     "bundle": "instalare/TraduceriTED-windows.zip",
     "bundle_sha256": "30c340660ce5d83f0e2700b3968527523c864bca2044c7ca0a94a650cb394e50",
     "bundle_size": 52818668
+  },
+  {
+    "version": "1.1.0",
+    "date": "2026-11-06",
+    "notes": [
+      "Memoria de traduceri: programul învață; textele traduse și verificate înainte se iau direct din memorie, instant și fără AI",
+      "Corecturile tale intră în memorie și se folosesc mai departe",
+      "Limbile și paginile se procesează în paralel: o fișă în 5 limbi durează ~3 minute în loc de ~6,5, iar a doua cu aceleași texte ~2 minute",
+      "Setări noi: Memorie de traduceri și Câte cereri AI în paralel"
+    ],
+    "package": "actualizari/TraduceriTED-1.1.0.zip",
+    "sha256": "ffc895ef7500d032f0fdff9dfc215f6d2b0c5e2205b06d60fdfd903166f070ad",
+    "bundle": "instalare/TraduceriTED-windows.zip",
+    "bundle_sha256": "ac54de9780b10d931a3abe5c081efc7f28d88e23043855a8d2283be026e5a9c4",
+    "bundle_size": 52825084
   }
 ]
